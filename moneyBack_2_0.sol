@@ -63,7 +63,7 @@ contract MoneyBack{
         return (true, amount);
     }
     
-    function reviewDebt(address _debtor, address _creditor) public returns (bool, uint) {
+    function reviewDebt(address _debtor, address _creditor) public view returns (bool, uint) {
         
         // make sure only participants of a deal can review it
         if (msg.sender != _debtor){
