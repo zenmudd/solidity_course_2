@@ -50,7 +50,7 @@ contract MoneyBack{
         // with address of debter (who pays back)
         // and with amount to be payed back
         creditor[msg.sender].amount -= amount;
-        PaybackSuccessfull(creditor[fromWhom].debtor, 'payed', amount, 'to', msg.sender );
+        PaybackSuccessfull(fromWhom, 'payed', amount, 'to', msg.sender );
         
         // in case debtor payed not full amount back
         if(creditor[msg.sender].amount != 0){
